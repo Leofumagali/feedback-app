@@ -1,8 +1,19 @@
-# React + Vite
+## Feedback App - Project Description 🚀
+Overview:
+Feedback App is a simple and interactive web application built with React and Reactstrap that allows users to submit feedback on a product or service. The app provides a structured form where users can enter their name, email, select a feedback type, and leave a comment.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
+✅ Responsive layout with a Header, Content, and Footer
+✅ Feedback Form with validation: Name, Email, Feedback Type (dynamic), and Comment
+✅ Dynamic Select Field powered by an external JSON file
+✅ Real-time Form Validation with error messages
+✅ Submit Button with Spinner for better UX while submitting
+✅ Styled with Bootstrap (Reactstrap) for a clean and professional look
 
-Currently, two official plugins are available:
+Technology Stack:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React for UI development
+Reactstrap for Bootstrap-based UI components
+JSON for dynamic feedback type selection
+GitHub for version control and project hosting
+This app serves as a foundation for collecting user feedback efficiently and can be extended with additional features like database storage, API integration, and analytics tracking.
