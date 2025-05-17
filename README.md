@@ -66,7 +66,7 @@ To generate a new admin password hash:
 node -e "require('bcrypt').hash('your-password', 10).then(console.log)"
 ```
 
-Don't forget to change 'your-password' to your real password.
+Don't forget to run this command inside backend folder and change 'your-password' to your real password.
 
 ---
 
@@ -117,7 +117,14 @@ frontend/src/
 
 ## 📷 Screenshots
 
-_(To be added – happy to generate polished mockups if you want!)_
+### 📝 Feedback Form
+![Feedback Form](./screenshots/feedbackform.png)
+
+### 🔐 Admin Login
+![Login Screen](./screenshots/login.png)
+
+### 📊 Admin Dashboard
+![Dashboard](./screenshots/dashboard.png)
 
 ---
 
