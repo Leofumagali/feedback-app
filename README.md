@@ -118,13 +118,16 @@ frontend/src/
 ## 📷 Screenshots
 
 ### 📝 Feedback Form
-![Feedback Form](./screenshots/feedbackform.png)
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/180fbe98-7e1a-444d-a1ac-778c71f327c0" />
+
 
 ### 🔐 Admin Login
-![Login Screen](./screenshots/login.png)
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/86fd21b9-4fd7-4d71-8745-f910c3543db2" />
+
 
 ### 📊 Admin Dashboard
-![Dashboard](./screenshots/dashboard.png)
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/544566f7-292f-47a9-917d-34608e89daf6" />
+
 
 ---
 
