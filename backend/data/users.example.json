@@ -1,0 +1,7 @@
+[
+  {
+    "id": "admin1",
+    "username": "admin",
+    "passwordHash": "your password hash here"
+  }
+]

@@ -16,6 +16,7 @@ export async function loginUser(username, password) {
   }
 
   const passwordMatch = await bcrypt.compare(password, user.passwordHash);
+  
   if (!passwordMatch) {
     const err = new Error('Invalid credentials');
     err.status = 401;
