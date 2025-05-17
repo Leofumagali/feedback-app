@@ -1,0 +1,15 @@
+.transition-chevron {
+  transition: transform 0.25s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.manual-dropdown {
+  position: absolute !important;
+  top: 35px !important;
+  left: auto !important;
+  right: 0 !important;
+  z-index: 1050;
+}

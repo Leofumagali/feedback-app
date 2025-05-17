@@ -1,18 +1,23 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Header } from "./components/Header";
-import { Content } from "./components/Content";
 import { Footer } from "./components/Footer";
+import { AppRoutes } from "./routes/AppRoutes";
+import { AuthProvider } from "./context/AuthProvider";
+import { BrowserRouter } from "react-router-dom";
+import './styles/global.css';
 
-const App = () => {
+export const App = () => {
   return (
-    <div className="d-flex flex-column min-vh-100">
-      <Header />
-      <div className="flex-grow-1 flex">
-        <Content />
-      </div>
-      <Footer />
-    </div>
-  );
+    <AuthProvider>
+      <BrowserRouter>
+        <div className="min-vh-100 d-flex flex-column" style={{ backgroundColor: '#f0f0f0' }}>
+          <Header />
+          <main className="d-flex flex-grow-1 container py-4">
+            <AppRoutes />
+          </main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
+  )
 };
-
-export default App;

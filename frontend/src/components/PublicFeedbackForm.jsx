@@ -1,12 +1,13 @@
 import { useState } from "react"
 import { Container, Form, FormGroup, Label, Input, Button } from "reactstrap";
 import feedbackTypes from "../data/feedbackTypes.json";
+import { createFeedback } from "../services/api"
 
-export const Content = () => {
+export const PublicFeedbackForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    feedbackType: "",
+    type: "",
     comment: "",
   });
 
@@ -16,7 +17,7 @@ export const Content = () => {
     let tempErrors = {};
     if (!formData.name) tempErrors.name = "Name is required";
     if (!formData.email.includes("@")) tempErrors.email = "Valid email is required";
-    if (!formData.feedbackType) tempErrors.feedbackType = "Feedback type is required";
+    if (!formData.type) tempErrors.type = "Feedback type is required";
     if (!formData.comment) tempErrors.comment = "Comment is required";
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
@@ -26,17 +27,23 @@ export const Content = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (validate()) {
-      alert("Feedback submitted successfully!");
-      setFormData({ name: "", email: "", feedbackType: "", comment: "" });
-      setErrors({});
+      try {
+        await createFeedback(formData);
+        alert("Feedback enviado com sucesso!");
+        setFormData({ name: '', email: '', type: '', comment: '' });
+      } catch (err) {
+        console.log(err)
+        setErrors({error: err})
+      }
     }
   };
 
   return (
-    <Container className="flex align-center p-4 bg-light rounded mt-4" style={{ maxWidth: "600px", width: "100%" }}>
+    <Container className="flex flex-grow-1 align-center p-4 bg-light rounded mt-4" style={{ maxWidth: "600px", width: "100%" }}>
       <h2 className="text-center">Give us your Feedback</h2>
       <p className="text-center">Let us know what you think about our service.</p>
 
@@ -66,12 +73,12 @@ export const Content = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="feedbackType">Feedback Type</Label>
+          <Label for="type">Feedback Type</Label>
           <Input
             type="select"
-            name="feedbackType"
-            id="feedbackType"
-            value={formData.feedbackType}
+            name="type"
+            id="type"
+            value={formData.type}
             onChange={handleChange}
             invalid={!!errors.feedbackType}
           >

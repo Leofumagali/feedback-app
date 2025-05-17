@@ -1,5 +1,5 @@
 [
-  { "id": 1, "value": "bug", "label": "Bug Report" },
-  { "id": 2, "value": "feature", "label": "Feature Request" },
+  { "id": 1, "value": "bug report", "label": "Bug Report" },
+  { "id": 2, "value": "feature request", "label": "Feature Request" },
   { "id": 3, "value": "other", "label": "Other" }
 ]
